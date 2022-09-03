@@ -1,0 +1,100 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./img/bg-img.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.overlay
+{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.404);
+    filter: blur(50px);
+    z-index: 10;
+}
+
+.drub_btns
+{
+    position: absolute;
+    width: 100%;
+    z-index: 11;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.drub_btns > div
+{
+    background-color: rgba(0, 0, 0, 0.301);
+    padding: 10px 25px;
+    border-radius: 3px;
+    border: 5px solid #000;
+    transition: 0.2s all ease-out;
+}
+
+.key
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* font-size: 18px;
+    font-weight: bold; */
+}
+.key>kbd
+{
+    font-size: 25px;
+    font-weight: 900;
+    color: #fff;
+}
+.key>span
+{
+    font-size: 13px;
+    color: #ffc600;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.play{
+    transform: scale(1.2);
+    /* position: absolute; */
+    
+    /* top: 30px; */
+    border-color: #ffc600 !important;
+    box-shadow: 0 0 10px #ffc600;
+}
+
+@media screen and (max-width:786px) {
+.drub_btns
+{
+    flex-direction: column;
+    gap: 0px;
+    padding: 100px;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+}
